@@ -1,0 +1,8 @@
+% Returns a scalar that specifies the length (in pixels) 
+% of the major axis of the ellipse that has the same 
+% normalized second central moments as the region
+function [ xx ] = MajorAxisLength( image )
+    x = regionprops(image,'MajorAxisLength');
+    x = x.MajorAxisLength;
+    xx= int64(x);
+end
